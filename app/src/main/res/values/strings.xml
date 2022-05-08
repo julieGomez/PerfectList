@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">PerfectList</string>
+
+    <string name="tv_name">Nom :</string>
+    <string name="tv_category">Catégorie :</string>
+    <string name="tv_nbPoint">Nombre de point :</string>
+    <string name="tv_isNotificationNeeded">Activer les notifications :</string>
+    <string name="tv_priority">Priorité :</string>
+    <string name="tv_security">Sécurité :</string>
+    <string name="tv_period">Récurence :</string>
+    <string name="tv_period_link">x par</string>
+    <string name="tv_endNotification">Fin des notifications :</string>
+
+    <string name="et_name">Nom</string>
+    <string name="et_category">Category</string>
+    <string name="et_nbPoint">0</string>
+
+    <string name="switch_notificationNeeded">NON</string>
+
+    <string name="button_create">Créer</string>
 </resources>

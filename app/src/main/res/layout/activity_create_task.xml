@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CreateTaskActivity">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="409dp"
+            android:layout_height="731dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/tv_name"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content" android:id="@+id/tv_name"
+            />
+            <EditText
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/et_name"
+                    tools:text="@string/et_name"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/tv_category"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content" android:id="@+id/tv_category"
+            />
+            <EditText
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/et_category"
+                    android:layout_marginEnd="100dp"
+                    tools:text="@string/et_category"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/tv_nbPoint"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content" android:id="@+id/tv_nbPoint"
+            />
+            <EditText
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/et_nbPoint"
+                    tools:text="@string/et_nbPoint"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/tv_isNotificationNeeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/tv_isNotificationNeeded"
+            />
+            <Switch
+                    android:text="@string/switch_notificationNeeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/switch_isNotificationNeeded"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/tv_priority"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content" android:id="@+id/tv_priority"
+            />
+            <Spinner
+                    android:layout_width="256dp"
+                    android:layout_height="30dp" android:id="@+id/spinner_priority"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+            <TextView
+                    android:text="@string/tv_security"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content" android:id="@+id/tv_secutity"
+            />
+            <Spinner
+                    android:layout_width="256dp"
+                    android:layout_height="33dp" android:id="@+id/spinner_security"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/tv_period"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content" android:id="@+id/tv_period"
+            />
+            <EditText
+                    android:layout_width="40dp"
+                    android:layout_height="39dp"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/et_nbOfRepetitions"
+            />
+            <TextView
+                    android:text="@string/tv_period_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/tv_period_link"
+            />
+            <Spinner
+                    android:layout_width="186dp"
+                    android:layout_height="43dp" android:id="@+id/spinner_typeOfRepetitions"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/tv_endNotification"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content" android:id="@+id/tv_endNotification"
+            />
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/switch_endNotification"
+            />
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:inputType="date"
+                    android:ems="10"
+                    android:id="@+id/et_endNotification"
+            />
+        </LinearLayout>
+        <Button
+                android:text="@string/button_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/button_create"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
