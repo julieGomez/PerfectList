@@ -12,10 +12,28 @@
     <string name="tv_endNotification">Fin des notifications :</string>
 
     <string name="et_name">Nom</string>
-    <string name="et_category">Category</string>
     <string name="et_nbPoint">0</string>
 
     <string name="switch_notificationNeeded">NON</string>
+    <string name="switch_endNotification">NON</string>
 
     <string name="button_create">Créer</string>
+
+    <string-array name="period_array">
+        <item>Heure</item>
+        <item>Jour</item>
+        <item>Semaine</item>
+        <item>Mois</item>
+        <item>An</item>
+    </string-array>
+
+    <string-array name="security_array">
+        <item>Privé</item>
+        <item>Public</item>
+    </string-array>
+
+    <string-array name="priority_array">
+        <item>Minimal</item>
+        <item>Maximal</item>
+    </string-array>
 </resources>

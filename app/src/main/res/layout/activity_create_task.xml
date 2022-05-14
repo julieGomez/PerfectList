@@ -7,158 +7,246 @@
         android:layout_height="match_parent"
         tools:context=".CreateTaskActivity">
 
+    <!-- Name -->
+    <TextView
+            android:id="@+id/tv_name"
+            android:text="@string/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline_begin"
+            app:layout_constraintEnd_toEndOf="@+id/et_name"
+            app:layout_constraintBottom_toTopOf="@+id/tv_category"
+    />
+    <EditText
+            android:id="@+id/et_name"
+            tools:text="@string/et_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline_middle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/spinner_category"/>
+
+    <!-- Category -->
+    <TextView
+            android:id="@+id/tv_category"
+            android:text="@string/tv_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/guideline_begin"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_category"
+            app:layout_constraintBottom_toTopOf="@+id/tv_nbPoint"
+    />
+    <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            app:layout_constraintTop_toBottomOf="@+id/et_name"
+            app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/et_nbPoint"/>
+
+    <!-- Number of points -->
+    <TextView
+            android:id="@+id/tv_nbPoint"
+            android:text="@string/tv_nbPoint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category"
+            app:layout_constraintStart_toStartOf="@+id/guideline_begin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_middle"
+            app:layout_constraintBottom_toTopOf="@+id/tv_isNotificationNeeded"
+    />
+    <EditText
+            android:id="@+id/et_nbPoint"
+            tools:text="@string/et_nbPoint"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_category"
+            app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+            app:layout_constraintBottom_toTopOf="@+id/switch_isNotificationNeeded"
+    />
+
+    <!-- Is notification needed -->
+    <TextView
+            android:id="@+id/tv_isNotificationNeeded"
+            android:text="@string/tv_isNotificationNeeded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nbPoint"
+            app:layout_constraintStart_toStartOf="@+id/guideline_begin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_middle"
+            app:layout_constraintBottom_toTopOf="@+id/tv_priority"
+    />
+    <Switch
+            android:id="@+id/switch_isNotificationNeeded"
+            android:text="@string/switch_notificationNeeded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/et_nbPoint"
+            app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_priority"
+    />
+
+    <!-- Priority -->
+    <TextView
+            android:id="@+id/tv_priority"
+            android:text="@string/tv_priority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tv_security"
+            app:layout_constraintStart_toStartOf="@+id/guideline_begin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_middle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_isNotificationNeeded"
+    />
+    <Spinner
+            android:id="@+id/spinner_priority"
+            android:entries="@array/priority_array"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_security"
+            app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/switch_isNotificationNeeded"
+    />
+
+    <!-- Security -->
+    <TextView
+            android:id="@+id/tv_security"
+            android:text="@string/tv_security"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_priority"
+            app:layout_constraintStart_toStartOf="@+id/guideline_begin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_middle"
+            app:layout_constraintBottom_toTopOf="@+id/tv_period"
+    />
+    <Spinner
+            android:id="@+id/spinner_security"
+            android:entries="@array/security_array"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_priority"
+            app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout_period"
+    />
+
+    <!-- Period -->
+    <TextView
+            android:id="@+id/tv_period"
+            android:text="@string/tv_period"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_security"
+            app:layout_constraintStart_toStartOf="@+id/guideline_begin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_middle"
+            app:layout_constraintBottom_toTopOf="@+id/tv_endNotification"
+    />
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="409dp"
-            android:layout_height="731dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/tv_name"
-                    android:layout_width="155dp"
-                    android:layout_height="wrap_content" android:id="@+id/tv_name"
-            />
-            <EditText
-                    android:layout_width="255dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/et_name"
-                    tools:text="@string/et_name"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/tv_category"
-                    android:layout_width="155dp"
-                    android:layout_height="wrap_content" android:id="@+id/tv_category"
-            />
-            <EditText
-                    android:layout_width="255dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/et_category"
-                    android:layout_marginEnd="100dp"
-                    tools:text="@string/et_category"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/tv_nbPoint"
-                    android:layout_width="155dp"
-                    android:layout_height="wrap_content" android:id="@+id/tv_nbPoint"
-            />
-            <EditText
-                    android:layout_width="255dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:ems="10"
-                    android:id="@+id/et_nbPoint"
-                    tools:text="@string/et_nbPoint"
-            />
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/tv_isNotificationNeeded"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/tv_isNotificationNeeded"
-            />
-            <Switch
-                    android:text="@string/switch_notificationNeeded"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/switch_isNotificationNeeded"
-            />
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/tv_priority"
-                    android:layout_width="153dp"
-                    android:layout_height="wrap_content" android:id="@+id/tv_priority"
-            />
-            <Spinner
-                    android:layout_width="256dp"
-                    android:layout_height="30dp" android:id="@+id/spinner_priority"
-            />
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="35dp">
-            <TextView
-                    android:text="@string/tv_security"
-                    android:layout_width="153dp"
-                    android:layout_height="wrap_content" android:id="@+id/tv_secutity"
-            />
-            <Spinner
-                    android:layout_width="256dp"
-                    android:layout_height="33dp" android:id="@+id/spinner_security"
-            />
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/tv_period"
-                    android:layout_width="153dp"
-                    android:layout_height="wrap_content" android:id="@+id/tv_period"
-            />
-            <EditText
-                    android:layout_width="40dp"
-                    android:layout_height="39dp"
-                    android:inputType="number"
-                    android:ems="10"
-                    android:id="@+id/et_nbOfRepetitions"
-            />
-            <TextView
-                    android:text="@string/tv_period_link"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/tv_period_link"
-            />
-            <Spinner
-                    android:layout_width="186dp"
-                    android:layout_height="43dp" android:id="@+id/spinner_typeOfRepetitions"
-            />
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="@string/tv_endNotification"
-                    android:layout_width="153dp"
-                    android:layout_height="wrap_content" android:id="@+id/tv_endNotification"
-            />
-            <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/switch_endNotification"
-            />
-            <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="42dp"
-                    android:inputType="date"
-                    android:ems="10"
-                    android:id="@+id/et_endNotification"
-            />
-        </LinearLayout>
-        <Button
-                android:text="@string/button_create"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button_create"/>
+            android:id="@+id/linearLayout_period"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout_endNotification"
+            app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_security">
+        <EditText
+                android:id="@+id/et_nbOfRepetitions"
+                android:inputType="number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+        />
+        <TextView
+                android:id="@+id/tv_period_link"
+                android:text="@string/tv_period_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/et_nbOfRepetitions"
+        />
+        <Spinner
+                android:id="@+id/spinner_typeOfRepetitions"
+                android:entries="@array/period_array"
+                android:spinnerMode="dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_period_link"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        />
     </LinearLayout>
+
+    <!-- End notifications -->
+    <TextView
+            android:id="@+id/tv_endNotification"
+            android:text="@string/tv_endNotification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/button_create"
+            app:layout_constraintStart_toStartOf="@+id/guideline_begin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_middle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_period"
+    />
+    <LinearLayout
+            android:id="@+id/linearLayout_endNotification"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/button_create"
+            app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_period">
+        <Switch
+                android:id="@+id/switch_endNotification"
+                android:text="@string/switch_endNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        />
+        <EditText
+                android:id="@+id/et_endNotification"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+
+    <!-- Create button -->
+    <Button
+            android:id="@+id/button_create"
+            android:text="@string/button_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0"
+    />
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.38"
+    />
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1.0"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
