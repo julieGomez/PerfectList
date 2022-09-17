@@ -209,12 +209,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
         />
-        <EditText
-                android:id="@+id/et_endNotification"
-                android:inputType="date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-        />
+        <TextView
+                android:id="@+id/tv_endNotificationDate"
+                android:text="@string/tv_endNotificationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <!-- Create button -->

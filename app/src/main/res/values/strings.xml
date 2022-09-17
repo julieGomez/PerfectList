@@ -10,6 +10,7 @@
     <string name="tv_period">Récurence :</string>
     <string name="tv_period_link">x par</string>
     <string name="tv_endNotification">Fin des notifications :</string>
+    <string name="tv_endNotificationDate">Séléctionner la date</string>
 
     <string name="et_name">Nom</string>
     <string name="et_nbPoint">0</string>
