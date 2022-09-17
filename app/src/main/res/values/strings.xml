@@ -14,8 +14,8 @@
     <string name="et_name">Nom</string>
     <string name="et_nbPoint">0</string>
 
-    <string name="switch_notificationNeeded">NON</string>
-    <string name="switch_endNotification">NON</string>
+    <string name="yes">OUI</string>
+    <string name="no">NON</string>
 
     <string name="button_create">Créer</string>
 
