@@ -20,13 +20,13 @@
     />
     <EditText
             android:id="@+id/et_name"
-            tools:text="@string/et_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_middle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/spinner_category"/>
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/spinner_category"
+            android:hint="@string/et_name"/>
 
     <!-- Category -->
     <TextView
@@ -62,7 +62,6 @@
     />
     <EditText
             android:id="@+id/et_nbPoint"
-            tools:text="@string/et_nbPoint"
             android:inputType="number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -70,7 +69,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline_middle"
             app:layout_constraintEnd_toEndOf="@+id/guideline_end"
             app:layout_constraintBottom_toTopOf="@+id/switch_isNotificationNeeded"
-    />
+            android:hint="@string/et_nbPoint"/>
 
     <!-- Is notification needed -->
     <TextView
@@ -163,6 +162,7 @@
                 android:inputType="number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:hint="@string/et_nbRepetition"
                 app:layout_constraintStart_toStartOf="@+id/guideline_middle"
         />
         <TextView

@@ -13,11 +13,12 @@
 
     <string name="et_name">Nom</string>
     <string name="et_nbPoint">0</string>
+    <string name="et_nbRepetition">0</string>
+
+    <string name="button_create">Créer</string>
 
     <string name="yes">OUI</string>
     <string name="no">NON</string>
-
-    <string name="button_create">Créer</string>
 
     <string-array name="period_array">
         <item>Heure</item>
