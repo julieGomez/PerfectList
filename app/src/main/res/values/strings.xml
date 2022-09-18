@@ -21,6 +21,10 @@
     <string name="yes">OUI</string>
     <string name="no">NON</string>
 
+    <string-array name="category_array">
+        <item>Diver</item>
+    </string-array>
+
     <string-array name="period_array">
         <item>Heure</item>
         <item>Jour</item>

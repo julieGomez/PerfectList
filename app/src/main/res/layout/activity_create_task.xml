@@ -41,6 +41,7 @@
     />
     <Spinner
             android:id="@+id/spinner_category"
+            android:entries="@array/category_array"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
